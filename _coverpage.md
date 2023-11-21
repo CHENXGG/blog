@@ -1,14 +1,13 @@
 <!-- _coverpage.md -->
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-qZ6dXl8H-1637505148577)(_media/icon.svg)]
+<img src="_media/avatar.png" alt="avatar" style="zoom:50%;" />
 
-# docsify <small>3.5</small>
+# **Xuguang Chen**
 
-> 一个神奇的文档网站生成器。
+> Communication Engineering, Zhejiang University of Technology, Undergrad
 
-- 简单、轻便 (压缩后 ~21kB)
-- 无需生成 html 文件
-- 众多主题
+>  DSP, FPGA, Embedded System, Deep Learning (CV & NLP)
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#docsify)
+> xuguangchen.zjut@gmail.com
+
+[GitHub](https://github.com/CHENXGG)    [Google Scholar](https://scholar.google.com/citations?hl=en&user=6SI7Ke0AAAAJ&view_op=list_works&gmla=AH70aAXIG88P4vP1qAzzqv2CMNMesLnvxJYpr9pyDkJgSwH7og9qjsIQIYU-BdMDMDzW3gxtD2A_AtLQb8Dex6v7YRTPX0yTREd78jRKFP9eXiARjTBrVwpFDTIM_E8jfT-otf0)
