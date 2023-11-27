@@ -40,7 +40,18 @@
             placeholder: '请输入搜索关键字',
             noData: '没有搜到呦!',
             depth:2
-      }
+      },
+      markdown: {
+            renderer: {
+                image: function(href, title, text) {
+                    // 按照原来的渲染 img
+                    var image_html = this.origin.image.apply(this, arguments)
+                    // 用 figure 包一下图片，实现居中
+                    return '<figure>' + image_html + '<figcaption>' + text +
+                        '</figcaption></figure>'
+                }
+            }
+        }
 
 
     }
@@ -105,6 +116,11 @@
       }
     });
   </script>
+  <style>
+    figure {
+        text-align: center
+    }
+  </style>
 
 
 </body>
