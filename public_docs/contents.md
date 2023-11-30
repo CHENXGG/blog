@@ -4,7 +4,9 @@
 
 * [[2023.11.27] 声呐系统概述](public_docs/dsp/sonar_signal_processing/声呐系统介绍.md)
 
-  >介绍声呐系统的组成、声呐方程、水声信道等
+* [[2023.11.30] 声呐信号处理基础](public_docs/dsp/sonar_signal_processing/声呐信号处理基础.md)
+  
+  >介绍介绍最佳估计理论与检测理论，说明声呐信号检测原理等。
 
 
 
