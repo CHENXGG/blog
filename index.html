@@ -18,7 +18,9 @@
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css"> -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"> -->
-  <!-- <link rel="stylesheet" href="https://osiris-ui.github.io/osiris/#/quick-start"> -->
+
+  <!-- mermaid -->
+  <link rel="stylesheet" href="//unpkg.com/mermaid/dist/mermaid.min.css" />
 
 </head>
 <body>
@@ -41,6 +43,17 @@
             noData: '没有搜到呦!',
             depth:2
       },
+      // mermaid
+      plugins: [
+        function (hook, vm) {
+          hook.ready(function () {
+            mermaid.initialize({ startOnLoad: false });
+          });
+          hook.doneEach(function () {
+            mermaid.init(undefined, '.mermaid');
+          });
+        }
+      ],
       markdown: {
             renderer: {
                 image: function(href, title, text) {
@@ -49,7 +62,16 @@
                     // 用 figure 包一下图片，实现居中
                     return '<figure>' + image_html + '<figcaption>' + text +
                         '</figcaption></figure>'
-                }
+                },
+                code: function (code, lang) {// mermaid
+                  var html = '';
+                  if (code.match(/^sequenceDiagram/) || code.match(/^graph/) || code.match(/^gantt/)) {
+                    html = '<div class="mermaid">' + code + '</div>';
+                  }
+                  // var hl = Prism.highlight(code, Prism.languages[lang] || Prism.languages.markup);
+                  // return '<figure>' + html + '<pre v-pre data-lang="' + lang + '"><code class="lang-' + lang + '">' + hl + '</code></pre>' + '</figure>';
+                  return '<figure>' + html + '</figure>';
+                },
             }
         }
 
@@ -90,37 +112,23 @@
   <!-- mouse click -->
   <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 
-  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-  <script>
-    L2Dwidget.init({
-      "model": {
-        //jsonpath控制显示那个小萝莉模型，
-        //(切换模型需要改动)
-        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
-        "scale": 1
-      },
-      "display": {
-        "position": "right", //看板娘的表现位置
-        "width": 70,  //小萝莉的宽度
-        "height": 140, //小萝莉的高度
-        "hOffset": 35,
-        "vOffset": -20
-      },
-      "mobile": {
-        "show": true,
-        "scale": 0.5
-      },
-      "react": {
-        "opacityDefault": 0.7,
-        "opacityOnHover": 0.2
-      }
-    });
-  </script>
+  <!-- mermaid -->
+  <script type="text/javascript" src="//unpkg.com/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
+
   <style>
     figure {
         text-align: center
     }
   </style>
+  <style>
+    table {
+      text-align: center;
+    }
+  </style>
+
 
 
 </body>
