@@ -4,7 +4,7 @@
 >
 > 与琨姐的会晤
 
-<img src="../../_media/myspace/2023.11.28.png" alt="image-20231130181211152" style="zoom:30%;" />
+<img src="../../_media/myspace/2023.11.28.png" alt="2023.11.28" style="zoom:30%;" />
 
 -----------------------
 
