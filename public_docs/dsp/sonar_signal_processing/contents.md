@@ -12,7 +12,7 @@
 
 * [[2023.11.28] 声呐信道](public_docs/dsp/sonar_signal_processing/声呐信道.md)
 
-  > 介绍声呐所处的水声信达的相关特征，声呐信号在水声信道传播时的特点。
+  > 介绍声呐所处的水声信道的相关特征，声呐信号在水声信道传播时的特点。
 
 * [[2023.11.30] 声呐信号检测理论](public_docs/dsp/sonar_signal_processing/声呐信号检测理论.md)
 
