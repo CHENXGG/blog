@@ -8,7 +8,7 @@
 
 4. [[2023.11.30] 声呐信号检测理论](public_docs/dsp/sonar_signal_processing/声呐信号检测理论.md)
 
-5. [[2023.12.4] 声呐信号参量估计](public_docs/dsp/sonar_signal_processing/声呐信号检测理论.md)
+5. [[2023.12.4] 声呐信号参量估计](public_docs/dsp/sonar_signal_processing/声呐信号参量估计.md)
 
   > 介绍最优参量估计原理，说明主动/被动声呐如何估计目标的方位角、速度和距离。
 
