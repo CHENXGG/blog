@@ -21,7 +21,8 @@
 
   <!-- mermaid -->
   <link rel="stylesheet" href="//unpkg.com/mermaid/dist/mermaid.min.css" />
-
+  <!-- 目录工具：docsify-toc-->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
 </head>
 <body>
   <div id="app"></div>
@@ -33,15 +34,16 @@
       loadNavbar: true, // 默认加载 _navbar.md，作为顶部导航栏
       loadSidebar: true, // 默认加载 _sidebar.md，作为侧边栏
       subMaxLevel: 2, // 生成目录的最大层级
+      sidebarDisplayLevel: 0,
       coverpage: true,
       search: 'auto', // 默认值
-        // 完整配置参数
+      // 搜索
       search: {
             maxAge: 86400000,//过期时间,单位毫秒,默认一天
             paths: [], // or 'auto'
             placeholder: '请输入搜索关键字',
             noData: '没有搜到呦!',
-            depth:2
+            depth:4
       },
       // mermaid
       plugins: [
@@ -54,6 +56,7 @@
           });
         }
       ],
+      // markdown
       markdown: {
             renderer: {
                 image: function(href, title, text) {
@@ -73,7 +76,34 @@
                   return '<figure>' + html + '</figure>';
                 },
             }
-        }
+        },
+      // 目录工具
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3',
+        title: '目录',
+      },
+      // // 字数统计
+      // count:{
+      //   countable: true,
+      //   position: 'top',
+      //   margin: '20px',
+      //   float: 'left',
+      //   fontsize:'0.9em',
+      //   color:'rgb(90,90,90)',
+      //   language:'chinese',
+      //   localization: {
+      //     words: "",
+      //     minute: ""
+      //   },
+      //   isExpected: true
+      // },
+      // 阅读进度条
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      }
 
 
     }
@@ -115,9 +145,14 @@
   <!-- mermaid -->
   <script type="text/javascript" src="//unpkg.com/mermaid/dist/mermaid.min.js"></script>
 
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
+  <!-- 目录工具：docsify-toc-->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
 
+  <!-- 字数统计 -->
+  <!-- <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script> -->
+
+  <!-- 阅读进度条 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
   <style>
     figure {
       text-align: center;
