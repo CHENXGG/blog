@@ -36,4 +36,5 @@ spectrogram(y,256,250,256,fs);
 
 
 
-![chrip波形及其频谱](_img/chrip.jpg)
+![图1 chrip波形及其频谱](_img/chrip.jpg)
+
