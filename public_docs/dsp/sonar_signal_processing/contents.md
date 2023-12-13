@@ -21,3 +21,8 @@
 * [[2023.12.4] 声呐信号参量估计](public_docs/dsp/sonar_signal_processing/声呐信号参量估计.md)
 
   > 介绍最优参量估计原理，说明主动/被动声呐如何估计目标的方位角、速度和距离。
+  
+* [[2023.12.13] CHRIP波形与脉冲压缩技术](public_docs/dsp/sonar_signal_processing/CHRIP波形与脉冲压缩技术.md)
+
+  > 介绍了CHRIP波形的时频特性，和以匹配滤波为基础的脉冲压缩技术。
+

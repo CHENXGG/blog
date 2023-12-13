@@ -12,10 +12,15 @@
 
 5. [[2023.12.4] 声呐信号参量估计](public_docs/dsp/sonar_signal_processing/声呐信号参量估计.md)
 
+6. [[2023.12.13] CHRIP波形与脉冲压缩技术](public_docs/dsp/sonar_signal_processing/CHRIP波形与脉冲压缩技术.md)
+
+   > 介绍了CHRIP波形的时频特性，和以匹配滤波为基础的脉冲压缩技术。
+
+
 # Something I'm doing or to do
 
 * RV1103$\to$Embedded Linux & simple AI applications
-* Xilinx Zynq$\to$蜂鸟E203
+* Xilinx Zynq
 
 -----------------
 
