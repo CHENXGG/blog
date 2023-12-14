@@ -14,7 +14,7 @@
 
 6. [[2023.12.13] CHRIP波形与脉冲压缩技术](public_docs/dsp/sonar_signal_processing/CHRIP波形与脉冲压缩技术.md)
 
-   > 介绍了CHRIP波形的时频特性，和以匹配滤波为基础的脉冲压缩技术。
+7. [[2023.12.14 波束成形](public_docs/dsp/sonar_signal_processing/波束成形.md)
 
 
 # Something I'm doing or to do
