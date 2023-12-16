@@ -18,7 +18,7 @@
 
 # 自然语言处理
 
-1. [[2023.12.16] 序列模型与循环神经网络](public_docs/deeplearning/循环神经网络.md)
+1. [[2023.12.16] 序列模型与循环神经网络](public_docs/deeplearning/nlp/循环神经网络.md)
 
 # Something I'm doing or to do
 
