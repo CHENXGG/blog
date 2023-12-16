@@ -14,12 +14,15 @@
 
 6. [[2023.12.13] CHRIP波形与脉冲压缩技术](public_docs/dsp/sonar_signal_processing/CHRIP波形与脉冲压缩技术.md)
 
-7. [[2023.12.14 波束成形](public_docs/dsp/sonar_signal_processing/波束成形.md)
+7. [[2023.12.14 波束成形]](public_docs/dsp/sonar_signal_processing/波束成形.md)
 
+# 自然语言处理
+
+1. [[2023.12.16] 序列模型与循环神经网络](public_docs/deeplearning/循环神经网络.md)
 
 # Something I'm doing or to do
 
-* RV1103$\to$Embedded Linux & simple AI applications
+* RV1103$\to$Embedded Linux & Simple AI applications
 * Xilinx Zynq
 
 -----------------
