@@ -26,7 +26,7 @@
 
   > 介绍了CHRIP波形的时频特性，和以匹配滤波为基础的脉冲压缩技术。
   
-* [[2023.12.14 波束成形](public_docs/dsp/sonar_signal_processing/波束成形.md)
+* [[2023.12.14] 波束成形](public_docs/dsp/sonar_signal_processing/波束成形.md)
 
   >Reading... 
 

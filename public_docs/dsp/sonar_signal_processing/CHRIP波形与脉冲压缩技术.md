@@ -12,29 +12,54 @@ Chrip信号（**L**inear **F**requency **M**odulation Signal, LFM）是声呐的
 
 Chrip信号作为一种线性调频信号，它的表达式为
 $$
-s(t) = \mathrm{cos}(2\pi f_0 + \pi k t^2) = \mathrm{exp}(j(2\pi f_0 + \pi k t^2)) \tag 1
+x(t) = \frac{1}{\sqrt{T}}\mathrm{rect}(\frac{t}{T})\mathrm{cos}(2\pi f_0 + \pi \mu t^2) \tag 1
 $$
-则
+则该信号的瞬时相位与瞬时频率为
 $$
 \begin{cases}
-\displaystyle \theta(t) = 2\pi f_0 + \pi k t^2  \\
-\displaystyle f(t) = \frac{d\theta}{dt}/2\pi = f_0+kt
+\displaystyle \theta(t) = 2\pi f_0 + \pi \mu t^2  \\
+\displaystyle f(t) = \frac{d\theta}{dt}/2\pi = f_0+\mu t
 \end{cases} \tag 2
 $$
-我们可以通过matlab轻松地观察其时频特性
+则显然信号带宽$B\approx F = \mu T$
 
-```matlab
-T = 0.1; % 脉冲时间
-fs = 10000; % 采样率看
-t=0 : 1/fs : T;
-y=chirp(t,200,T,2000); % 第一个参数表示时间长度，第二个参数表示当t=0s时对应的频率，第三个和第四个参数为当t=0.05s时对应的频率
-subplot(2,1,1); 
-plot(t, y); 
-subplot(2,1,2);
-spectrogram(y,256,250,256,fs); 
-```
+则复信号定义为
+$$
+s(t) = \frac{1}{\sqrt{T}}\mathrm{rect}(\frac{t}{T})e^{j(2\pi f_0 + \pi \mu t^2)} \tag 3
+$$
+复包络信号定义为
+$$
+u(t) = \frac{1}{\sqrt{T}}\mathrm{rect}(\frac{t}{T})e^{j(\pi \mu t^2)} \tag 4
+$$
+根据[复包络的性质](public_docs/dsp/sonar_signal_processing/声呐系统介绍.md)我们可以得知，原信号的频谱形状与复包络一致。
+
+因此我们根据复包络计算频谱
+$$
+\begin{aligned}
+ U(f) & = \int_{-\infin}^{\infin} u(t)e^{-j2\pi ft}dt \\
+	 & = \int_{-\infin}^{\infin} \frac{1}{\sqrt{T}}\mathrm{rect}(\frac{t}{T})e^{j(\pi \mu t^2)}e^{-j2\pi ft}dt \\
+	 & = \int_{-\frac{T}{2}}^{\frac{T}{2}} \frac{1}{\sqrt{T}}e^{-j\pi(2ft-\mu t^2)}dt \\
+	 & = \int_{-\frac{T}{2}}^{\frac{T}{2}} \frac{1}{\sqrt{T}}e^{-j\pi\frac{f^2}{\mu}[1-(\frac{\mu}{f}t-1)^2]}dt \\
+	 & = \frac{1}{\sqrt{T}}e^{j\pi \frac{f^2}{\mu}} \int_{-\frac{T}{2}}^{\frac{T}{2}}e^{j\frac{\pi}{2}2\mu(t-\frac{f}{\mu})^2}dt
+\end{aligned} \tag 5
+$$
+令$\displaystyle x=\sqrt{2\mu}(t-\frac{f}{\mu})， v_1 = \sqrt{2\mu}(\frac{T}{2}-\frac{f}{\mu})， v_2 = \sqrt{2\mu}(\frac{T}{2}+\frac{f}{\mu})$，式$(5)$改写为
+$$
+\begin{aligned}
+U(f) & = \frac{1}{\sqrt{2\mu T}}e^{-j\pi \frac{f^2}{\mu}} \int_{-v_2}^{v_1}e^{j\pi x^2}dx \\
+	 & = \frac{1}{\sqrt{2\mu T}}e^{-j\pi \frac{f^2}{\mu}} \int_{-v_2}^{v_1}[\mathrm{cos}(\frac{\pi}{2} x^2)+j\mathrm{sin}(\frac{\pi}{2} x^2)]dx \\
+	 & = \frac{1}{\sqrt{2\mu T}}e^{-j\pi \frac{f^2}{\mu}}\{ [c(v_1)+c(v_2)]+j[s(v_1)+s(v_2)]\}
+\end{aligned} \tag 6
+$$
+其中，$c(\cdot)$和$s(\cdot)$分别式菲涅尔积分公式
+$$
+c(v) = \int_0^{v}\mathrm{cos}(\frac{\pi x^2}{2})dx, \quad\quad s(v) = \int_0^{v}\mathrm{sin}(\frac{\pi x^2}{2})dx \tag 7
+$$
+根据其性质可知，在$BT \gg 1$时，95%的能量集中在$\displaystyle \left[-\frac{B}{2}, \frac{B}{2}\right]$中，频谱近似为矩形。近似得到
+$$
+U(f) \approx \frac{1}{\sqrt{2\mu T}}e^{j[-\frac{\pi f^2}{\mu}+\frac{\pi}{4}]}, \quad \quad \vert f\vert \le \frac{B}{2} \tag 8
+$$
 
 
 
-![图1 chrip波形及其频谱](_img/chrip.jpg)
 
