@@ -28,13 +28,13 @@
 
   * Components: FreeRTOS, **Linux**, [TODO]LVGL, ...
 
-  * Multicopter Design and Control(Fellowing with [the public courses](https://rfly.buaa.edu.cn/course.html) of Beihang University’s [Reliable Flight Control Group](https://rfly.buaa.edu.cn/index.html#/home) led by Prof. Quan Quan)
+  * [TODO]Multicopter Design and Control(Fellowing with [the public courses](https://rfly.buaa.edu.cn/course.html) of Beihang University’s [Reliable Flight Control Group](https://rfly.buaa.edu.cn/index.html#/home) led by Prof. Quan Quan)
 
 * Deep Learning (**Supervised by Prof. Qi Xuan and Doc. student Yao Lu**)
 
   * Compute Vision: Dataset Distillation, Adversarial Training and Explainable AI
 
-  * [TODO]Natural Language Processing
+  * [Leaning]Natural Language Processing
 
 ## 🔆Other Skills
 

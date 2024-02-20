@@ -26,13 +26,13 @@
 
   * 组件: FreeRTOS, **Linux**, [TODO]LVGL, ...
 
-  * 多旋翼飞行器设计与控制(正跟随全权教授指导的[北航可靠飞行控制研究组](https://rfly.buaa.edu.cn/index.html#/home)的[公开课程](https://rfly.buaa.edu.cn/course.html)学习)
+  * [TODO]多旋翼飞行器设计与控制(正跟随全权教授指导的[北航可靠飞行控制研究组](https://rfly.buaa.edu.cn/index.html#/home)的[公开课程](https://rfly.buaa.edu.cn/course.html)学习)
 
 * 深度学习(荣受宣琦教授与博士生陆耀指导)
 
   * 计算机视觉: 数据集蒸馏, 对抗训练, 可解释人工智能
 
-  * [TODO]自然语言处理
+  * [Learning]自然语言处理
 
 ## 🔆其他技能
 

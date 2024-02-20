@@ -1,4 +1,4 @@
-# 声呐信号处理
+# Sonar Signal Processing
 
 > 介绍声呐信号处理的相关原理。
 
@@ -16,16 +16,18 @@
 
 7. [[2023.12.14] 波束成形](public_docs/dsp/sonar_signal_processing/波束成形.md)
 
-# 自然语言处理
+-----------------------
+
+# Natural Language Processing
 
 1. [[2023.12.16] 序列模型与循环神经网络](public_docs/deeplearning/nlp/循环神经网络.md)
+
+-------------------
 
 # Something I'm doing or to do
 
 * RV1103$\to$Embedded Linux & Simple AI applications
 * Xilinx Zynq
 
------------------
 
-* [秘密空间](public_docs/myspace/秘密基地.md)
 
