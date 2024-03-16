@@ -8,6 +8,8 @@
   
   - [Moments](public_docs/myspace/contents.md)
   
+  - [Feelings](public_docs/myspace/feelings.md)
+  
     
     
     
